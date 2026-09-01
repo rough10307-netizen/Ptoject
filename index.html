@@ -1,1 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Free Fire Player Search</title>
 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: white;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .box {
+            width: 400px;
+            margin: auto;
+            background: #222;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        input {
+            width: 90%;
+            padding: 12px;
+            margin: 15px 0;
+            font-size: 16px;
+            border-radius: 8px;
+            border: none;
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Free Fire Player</h1>
+
+        <p>Enter Free Fire UID</p>
+
+        <input type="text" id="uid" placeholder="Enter UID">
+
+        <br>
+
+        <button onclick="searchPlayer()">Search</button>
+
+        <div id="result"></div>
+
+    </div>
+
+    <script>
+        function searchPlayer() {
+
+            let uid = document.getElementById("uid").value;
+
+            if (uid === "") {
+                document.getElementById("result").innerHTML =
+                    "Please enter a UID.";
+                return;
+            }
+
+            document.getElementById("result").innerHTML =
+                "UID entered: " + uid;
+        }
+    </script>
+
+</body>
+</html>
